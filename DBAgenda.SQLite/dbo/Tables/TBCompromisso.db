@@ -1,0 +1,13 @@
+﻿-- Script Date: 07/07/2021 14:25  - ErikEJ.SqlCeScripting version 3.5.2.87
+CREATE TABLE [TBCompromisso] (
+  [Id] INTEGER NOT NULL
+, [Local] TEXT NULL
+, [Data] NUMERIC NOT NULL
+, [HoraInicio] INTEGER NOT NULL
+, [HoraTermino] INTEGER NOT NULL
+, [Link] TEXT NULL
+, [Assunto] TEXT NULL
+, [Id_Contato] INTEGER NULL
+, CONSTRAINT [PK_TBCompromisso] PRIMARY KEY ([Id])
+, CONSTRAINT [FK_TBCompromisso_TBContato] FOREIGN KEY ([Id_Contato]) REFERENCES [TBContato] ([Id])
+);

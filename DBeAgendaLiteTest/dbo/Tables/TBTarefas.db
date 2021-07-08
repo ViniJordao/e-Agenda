@@ -1,0 +1,10 @@
+﻿-- Script Date: 08/07/2021 14:51  - ErikEJ.SqlCeScripting version 3.5.2.87
+CREATE TABLE [TBTarefas] (
+  [Id] INTEGER NOT NULL
+, [Titulo] TEXT NOT NULL
+, [DataCriacao] NUMERIC NOT NULL
+, [DataConclusao] NUMERIC NULL
+, [Prioridade] INTEGER NOT NULL
+, [Percentual] INTEGER NOT NULL
+, CONSTRAINT [PK_TBTarefas] PRIMARY KEY ([Id])
+);

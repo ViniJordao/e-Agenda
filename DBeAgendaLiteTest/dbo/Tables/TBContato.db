@@ -1,0 +1,10 @@
+﻿-- Script Date: 08/07/2021 14:52  - ErikEJ.SqlCeScripting version 3.5.2.87
+CREATE TABLE [TBContato] (
+  [Id] INTEGER NOT NULL
+, [Nome] TEXT NOT NULL
+, [Email] TEXT NOT NULL
+, [Telefone] TEXT NOT NULL
+, [Cargo] TEXT NULL
+, [Empresa] TEXT NULL
+, CONSTRAINT [PK_TBContato] PRIMARY KEY ([Id])
+);
