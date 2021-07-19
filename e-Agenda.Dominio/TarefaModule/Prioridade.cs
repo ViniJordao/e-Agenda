@@ -1,4 +1,5 @@
 ﻿using DescriptionLibrary;
+using System;
 
 namespace eAgenda.Dominio.TarefaModule
 {
@@ -35,7 +36,6 @@ namespace eAgenda.Dominio.TarefaModule
             return prioridade.Description();
         }
 
-
-
+        
     }
 }

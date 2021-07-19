@@ -23,7 +23,7 @@ namespace eAgenda.Controladores.Shared
 
         public static int Insert(string sql, Dictionary<string, object> parameters)
         {
-            if (bancoEscolhido.Equals("dbeagendalite"))
+            if (bancoEscolhido.Equals("DBAgenda"))
             {
                 SQLiteConnection connectionLite = new SQLiteConnection(connectionString);
 
@@ -59,7 +59,7 @@ namespace eAgenda.Controladores.Shared
 
         public static void Update(string sql, Dictionary<string, object> parameters = null)
         {
-            if (bancoEscolhido.Equals("dbeagendalite"))
+            if (bancoEscolhido.Equals("DBAgenda"))
             {
                 SQLiteConnection connectionLite = new SQLiteConnection(connectionString);
 
@@ -95,7 +95,7 @@ namespace eAgenda.Controladores.Shared
 
         public static List<T> GetAll<T>(string sql, ConverterDelegate<T> convert, Dictionary<string, object> parameters = null)
         {
-            if (bancoEscolhido.Equals("dbeagendalite"))
+            if (bancoEscolhido.Equals("DBAgenda"))
             {
                 SQLiteConnection connectionLite = new SQLiteConnection(connectionString);
 
@@ -143,7 +143,7 @@ namespace eAgenda.Controladores.Shared
         }
         public static T Get<T>(string sql, ConverterDelegate<T> convert, Dictionary<string, object> parameters)
         {
-            if (bancoEscolhido.Equals("dbeagendalite"))
+            if (bancoEscolhido.Equals("DBAgenda"))
             {
                 SQLiteConnection connectionLite = new SQLiteConnection(connectionString);
 
@@ -185,7 +185,7 @@ namespace eAgenda.Controladores.Shared
         }
         public static bool Exists(string sql, Dictionary<string, object> parameters)
         {
-            if (bancoEscolhido.Equals("dbeagendalite"))
+            if (bancoEscolhido.Equals("DBAgenda"))
             {
                 SQLiteConnection connectionLite = new SQLiteConnection(connectionString);
 

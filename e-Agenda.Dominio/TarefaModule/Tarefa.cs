@@ -5,7 +5,17 @@ using System.Collections.Generic;
 namespace eAgenda.Dominio.TarefaModule
 {
     public class Tarefa : EntidadeBase, IEquatable<Tarefa>
-    {        
+    {
+        private int prioridade;
+        private DateTime dataInicio;
+        private DateTime dataFinal;
+
+        public Tarefa()
+        {
+        }
+
+     
+
         public Tarefa(string titulo, DateTime dataCriacao, PrioridadeEnum prioridade)
         {            
             Titulo = titulo;
@@ -13,12 +23,20 @@ namespace eAgenda.Dominio.TarefaModule
             Prioridade = new Prioridade(prioridade);            
         }
 
+        public Tarefa(int prioridade, string titulo, DateTime dataInicio, DateTime dataFinal, int percentual)
+        {
+            this.prioridade = prioridade;
+            Titulo = titulo;
+            this.dataInicio = dataInicio;
+            this.dataFinal = dataFinal;
+            Percentual = percentual;
+        }
 
-        public string Titulo { get; }
+        public string Titulo { get; set; }
 
-        public Prioridade Prioridade { get; }
+        public Prioridade Prioridade { get; set; }
 
-        public DateTime DataCriacao { get;  }
+        public DateTime DataCriacao { get; set; }
 
         public int Percentual { get; private set; }
 

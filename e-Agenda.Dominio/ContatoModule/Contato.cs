@@ -16,11 +16,15 @@ namespace eAgenda.Dominio.ContatoModule
             Cargo = cargo;
         }
 
-        public string Nome { get; }
-        public string Email { get; }
-        public string Telefone { get; }
-        public string Cargo { get; }
-        public string Empresa { get; }
+        public Contato()
+        {
+        }
+
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Telefone { get; set; }
+        public string Cargo { get; set; }
+        public string Empresa { get; set; }
 
         public override string Validar()
         {
@@ -65,6 +69,12 @@ namespace eAgenda.Dominio.ContatoModule
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Cargo);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Empresa);
             return hashCode;
+        }
+        public override string ToString()
+        {
+
+            return Nome + ", " + Email + ", " + Telefone + ", " + Empresa + ", " + Cargo;
+
         }
     }
 }
